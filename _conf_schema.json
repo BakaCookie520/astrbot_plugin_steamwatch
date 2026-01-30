@@ -1,0 +1,92 @@
+{
+  "steam_web_api_key": {
+    "type": "string",
+    "description": "Steam Web API Key（用于轮询与自定义链接解析）",
+    "default": ""
+  },
+  "poll_interval_sec": {
+    "type": "int",
+    "description": "轮询间隔（秒，最小 30）",
+    "default": 60
+  },
+  "request_timeout_sec": {
+    "type": "int",
+    "description": "请求超时（秒）",
+    "default": 10
+  },
+  "request_retries": {
+    "type": "int",
+    "description": "请求重试次数",
+    "default": 2
+  },
+  "request_retry_delay_sec": {
+    "type": "int",
+    "description": "重试间隔（秒）",
+    "default": 2
+  },
+  "proxy_url": {
+    "type": "string",
+    "description": "代理地址（可选，例如 http://127.0.0.1:7890）",
+    "default": ""
+  },
+  "debug_log": {
+    "type": "bool",
+    "description": "是否开启调试日志",
+    "default": false
+  },
+  "verify_ssl": {
+    "type": "bool",
+    "description": "是否校验证书（关闭可绕过 CERTIFICATE_VERIFY_FAILED）",
+    "default": true
+  },
+  "show_csgo_friend_code": {
+    "type": "bool",
+    "description": "是否在绑定/解析中额外显示 CS:GO 好友码",
+    "default": false
+  },
+  "steamids": {
+    "type": "list",
+    "description": "需要监控的 SteamID64 列表",
+    "default": []
+  },
+  "bindings": {
+    "type": "list",
+    "description": "用户绑定（由指令维护，格式 user_id:steamid64）",
+    "default": []
+  },
+  "binding_meta": {
+    "type": "list",
+    "description": "绑定昵称（由指令维护，格式 user_id:nickname）",
+    "default": []
+  },
+  "admin_user_ids": {
+    "type": "list",
+    "description": "管理员用户ID列表（为空则不限制敏感指令）",
+    "default": []
+  },
+  "notify_targets": {
+    "type": "list",
+    "description": "接收通知的会话目标列表",
+    "default": []
+  },
+  "notify_group_enabled": {
+    "type": "bool",
+    "description": "是否启用分群订阅",
+    "default": false
+  },
+  "notify_groups": {
+    "type": "list",
+    "description": "分群订阅（格式 group:target）",
+    "default": []
+  },
+  "steamid_groups": {
+    "type": "list",
+    "description": "SteamID 分组（格式 steamid:group）",
+    "default": []
+  },
+  "notify_on_stop": {
+    "type": "bool",
+    "description": "玩家停止游戏时是否通知",
+    "default": false
+  }
+}
